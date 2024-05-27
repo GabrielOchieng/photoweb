@@ -1,6 +1,7 @@
 import { apiSlice } from "./apiSlice";
 
-const USERS_URL = "http://localhost:5000/users";
+const USERS_URL = "https://photoweb-api.onrender.com/users";
+// const USERS_URL = "http://localhost:5000/users";
 
 export const usersApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
