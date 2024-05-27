@@ -12,7 +12,7 @@ const Body = () => {
           </h1>
           <hr className="border border-teal-700 w-32 md:w-48 h-2 bg-teal-700 ml-[-20px]" />
           <p className="md:text-xl text-gray-500">
-            Find a free online photo albums. Keep each other happy and invite
+            Find free online photo albums. Keep each other happy and invite
             family and friends. Share memories together!
           </p>
           <div className="flex gap-2">

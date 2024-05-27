@@ -2,39 +2,39 @@ import React from "react";
 
 const items = [
   {
-    title: "SHARE AND CREATE YOUR ONLINE PHOTO BOOK WITH MYALBUM        ",
+    title: "SHARE AND VIEW  ONLINE PHOTOS WITH PHOTOWEB        ",
     description:
       "Welcome to MyAlbum, the ultimate destination for capturing and sharing your best memories. With our innovative and easy-to-use tools, you can easily share your online photo album, create a beautiful online photo book, and effortlessly share it online with friends and family. Discover the benefits of MyAlbum and make your photos shine.",
   },
   {
-    title: "EASY SHARING",
+    title: "EASY VIEWING",
     description:
-      "With MyAlbum, sharing your memories has never been easier. Upload your photos, add texts and layouts, and share your online photo book instantly with a unique link. Whether you want to share your last vacation, a special occasion, or a collection of your best moments, MyAlbum puts it all at your fingertips.    ",
+      "With Photoweb, viewing your memories has never been easier. View photos,  texts and layouts, and view online photo book instantly with a unique link. Whether you want to view your last vacation, a special occasion, or a collection of best moments, Photoweb puts it all at your fingertips.    ",
   },
   {
     title: "PROFESSIONAL LAYOUTS",
     description:
-      "Our advanced yet easy-to-use design capabilities allow you to create beautiful, professional photo books. Choose from a variety of templates and layouts to make your photos stand out. This way, you can create an impressive online photo book that you can proudly display in no time.    ",
+      "Our advanced yet easy-to-use design capabilities allow you to view beautiful, professional photo books. Choose from a variety of templates and layouts to make  photos stand out. This way, you can view an impressive online photo book that you can proudly display in no time.    ",
   },
   {
     title: "UNLIMITED STORAGE    ",
     description:
-      "With MyAlbum, you get unlimited storage space for free to store all your memories safely. Whether you have a few photos or thousands, you can organize and share them all without worrying about storage limits. Your memories are always accessible, no matter where you are.    ",
+      "With Photoweb, you get unlimited storage space for free to store all your memories safely. Whether you have a few photos or thousands, you can organize and view them all without worrying about storage limits. Your memories are always accessible, no matter where you are.    ",
   },
   {
     title: "SAFETY FIRST",
     description:
-      "We understand how important privacy is. That's why we make sure your albums are safe and only visible to the people you choose. With MyAlbum, you have complete control over who can view and share your photo books.",
+      "We understand how important privacy is. That's why we make sure albums are safe and only visible to the people who are authenticated. With Photoweb, you have complete control over who can view and share photo books.",
   },
   {
     title: "VERSATILE POSSIBILITIES",
     description:
-      "Whether you're looking to create a photo book for a special occasion, share a digital photo album with family, or showcase a professional portfolio, MyAlbum offers the versatility and flexibility you need. Our tools are designed to meet your every need, so you can always create and share the perfect online photo album.",
+      "Whether you're looking to view a photo book for a special occasion, share a digital photo album with family, or showcase a professional portfolio, Photoweb offers the versatility and flexibility you need. Our tools are designed to meet your every need, so you can always view and share the perfect online photo album.",
   },
   {
     title: "GET STARTED TODAY",
     description:
-      "Get started with MyAlbum today and experience how easy it is to create and share an online photo book. Create, share and enjoy your best moments on your PC but also with the MyAlbum iPhone and Android app. With MyAlbum, your memories are always at your fingertips, ready to be shared and relived.",
+      "Get started with Photoweb today and experience how easy it is to view and share an online photo book. View, share and enjoy best moments on your PC but also with the Photoweb iPhone and Android app. With Photoweb, your memories are always at your fingertips, ready to be shared and relived.",
   },
 ];
 
