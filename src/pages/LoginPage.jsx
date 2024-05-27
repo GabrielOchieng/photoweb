@@ -38,7 +38,7 @@ const LoginPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-md px-8 py-12 w-full md:w-1/3">
+      <div className="bg-white rounded-lg shadow-md px-8 py-12 w-[90%] md:w-1/3">
         <h1 className="text-2xl font-bold text-center mb-8">Login</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
