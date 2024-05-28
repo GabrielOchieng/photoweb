@@ -68,7 +68,7 @@ const UsersPage = () => {
       {isLoading && <AlbumSkeleton />}
       {error && <p className="text-red-500">{error}</p>}
       {users.length > 0 && (
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4">
           {users.map((user) => (
             <UserCard
               key={user.id}
