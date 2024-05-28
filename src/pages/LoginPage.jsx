@@ -176,6 +176,7 @@ const LoginPage = () => {
             <button
               type="submit"
               className="w-full rounded-md bg-blue-500 py-2 text-center text-white font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:offset-2 focus:ring-blue-500"
+              disabled={!email || !password}
             >
               Login
             </button>

@@ -119,7 +119,7 @@ const UserDetailsPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container h-screen mx-auto px-4 py-8">
       {isLoading && <AlbumSkeleton />}
       {error && <p className="text-red-500">{error}</p>}
       {user && (
