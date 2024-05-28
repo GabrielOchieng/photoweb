@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useRegisterMutation } from "../redux/slices/usersApiSlice";
 import { setCredentials } from "../redux/slices/authSlice";
 import { toast } from "react-toastify";
+import FadeLoader from "react-spinners/FadeLoader";
 
 const RegisterPage = () => {
   const [name, setName] = useState("");
@@ -115,12 +116,22 @@ const RegisterPage = () => {
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full rounded-md bg-blue-500 py-2 text-center text-white font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            Register
-          </button>
+          {isLoading ? (
+            <div className="text-center mt-4">
+              <FadeLoader
+                color={"#3498db"}
+                size={80}
+                className="mx-auto block"
+              />{" "}
+            </div>
+          ) : (
+            <button
+              type="submit"
+              className="w-full rounded-md bg-blue-500 py-2 text-center text-white font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              Register
+            </button>
+          )}
           <div className="text-center mt-2">
             <p>
               Already registered?{" "}
