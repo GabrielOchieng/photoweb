@@ -25,8 +25,7 @@ const Menu = ({ userInfo, handleLogout }) => {
           <Link to="/">Home</Link>
 
           <Link to="/users">Users</Link>
-          <Link to="/albums">Albums</Link>
-          <Link to="/photos">Photos</Link>
+
           {userInfo ? (
             <div className="flex flex-col gap-2">
               <p>Welcome {userInfo.username}</p>
