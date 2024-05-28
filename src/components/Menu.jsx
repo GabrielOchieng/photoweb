@@ -21,20 +21,26 @@ const Menu = ({ userInfo, handleLogout }) => {
       )}
 
       {open && (
-        <div className="absolute bg-teal-700 text-white right-0 top-20 w-72 h-[400px] flex flex-col items-start justify-center gap-8 text-xl z-10 pl-5 rounded-b-md">
-          <Link to="/">Home</Link>
+        <div className="absolute bg-teal-700 text-white right-0 top-20 w-64 h-[200px] flex flex-col items-start justify-center gap-4 text-xl z-10 pl-5 rounded-b-md">
+          <Link to="/" className="hover:text-black">
+            Home
+          </Link>
 
-          <Link to="/users">Users</Link>
+          <Link to="/users" className="hover:text-black">
+            Users
+          </Link>
 
           {userInfo ? (
             <div className="flex flex-col gap-2">
               <p>Welcome {userInfo.username}</p>
-              <Link to="/" onClick={handleLogout}>
+              <Link to="/" onClick={handleLogout} className="hover:text-black">
                 Logout
               </Link>
             </div>
           ) : (
-            <Link to="/login">Signin</Link>
+            <Link to="/login" className="hover:text-black">
+              Signin
+            </Link>
           )}
         </div>
       )}
