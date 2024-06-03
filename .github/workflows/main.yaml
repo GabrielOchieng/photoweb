@@ -27,7 +27,7 @@ jobs:
       - name: NPM install, build and test
         run: |
           npm install
-          npm test
+          npm run test
 
   deploy:
     name: Deploy
