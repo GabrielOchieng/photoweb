@@ -5,8 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../redux/slices/usersApiSlice";
 import { logout } from "../redux/slices/authSlice";
 import { IoMdPhotos } from "react-icons/io";
+import { useState } from "react";
+import UserSearchModal from "./UserSearchModal";
 
 const Navbar = () => {
+  const [users, setUsers] = useState([]);
+  const [showModal, setShowModal] = useState(false);
   const { userInfo } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,6 +25,15 @@ const Navbar = () => {
       console.log(err);
       alert(err.message);
     }
+  };
+
+  const handleSearch = (filteredUsers) => {
+    setUsers(filteredUsers); // Update users state for potential use elsewhere
+    setShowModal(true); // Show modal with search results
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -86,7 +99,12 @@ const Navbar = () => {
         </div>
         {/* RIGHT */}
         <div className="w-2/3 xl:w-1/3 flex items-center justify-between gap-8">
-          <SearchBar data-testid="search-bar" />
+          <SearchBar data-testid="search-bar" onSearch={handleSearch} />
+          <div>
+            {showModal && (
+              <UserSearchModal users={users} onCloseModal={handleCloseModal} />
+            )}
+          </div>
         </div>
       </div>
     </div>

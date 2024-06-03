@@ -40,7 +40,9 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-md px-8 py-12 w-[90%] md:w-1/3">
-        <h1 className="text-2xl font-bold text-center mb-8">Login</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-center mb-8">
+          Login to view more information
+        </h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 mb-2">
