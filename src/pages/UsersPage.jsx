@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UserCard from "../components/UserCard";
 import AlbumSkeleton from "../components/AlbumSkeleton";
+import axios from "axios";
 
 const UsersPage = () => {
   const [users, setUsers] = useState([]);
@@ -12,13 +13,14 @@ const UsersPage = () => {
     const fetchUsers = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(
+        const response = await axios.get(
           "https://jsonplaceholder.typicode.com/users"
         );
-        if (!response.ok) {
+
+        if (!response.data) {
           throw new Error("Failed to fetch users");
         }
-        const data = await response.json();
+        const data = await response.data;
         setUsers(data);
       } catch (error) {
         setError(error.message);
@@ -32,18 +34,17 @@ const UsersPage = () => {
 
   const fetchUserAlbums = async (userId) => {
     try {
-      const response = await fetch(
+      const response = await axios.get(
         `https://jsonplaceholder.typicode.com/albums?userId=${userId}`
       );
-      if (!response.ok) {
+      if (!response.data) {
         throw new Error("Failed to fetch albums");
       }
-      const data = await response.json();
-      //   console.log(data);
+      const data = await response.data;
       return data.length; // Return the number of albums
     } catch (error) {
       console.error("Error fetching albums for user", userId, error);
-      return 0; // Handle errors gracefully, return 0 for albums count
+      return 0;
     }
   };
 
