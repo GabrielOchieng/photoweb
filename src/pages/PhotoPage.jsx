@@ -10,7 +10,7 @@ const PhotoPage = () => {
   const [newTitle, setNewTitle] = useState("");
 
   const { userId, albumId, photoId } = useParams(); // Access user ID, album ID, and photo ID from route parameters
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPhotoDetails = async () => {
@@ -97,6 +97,7 @@ const PhotoPage = () => {
 
           {!isEditingTitle && (
             <button
+              role="button"
               className="bg-teal-700 text-black border rounded-md px-4 py-2 my-2 hover:bg-gray-500 hover:text-white"
               onClick={handleEditTitle}
             >
@@ -112,12 +113,14 @@ const PhotoPage = () => {
                 className="border border-gray-300 rounded px-2 py-1 w-full mb-2"
               />
               <button
+                role="button"
                 className="bg-teal-700 text-white border rounded-md px-4 py-2 mr-3"
                 onClick={handleSaveTitle}
               >
                 Save
               </button>
               <button
+                role="button"
                 className="bg-green-500 text-black border rounded-md px-4 py-2"
                 onClick={handleCancelEdit}
               >

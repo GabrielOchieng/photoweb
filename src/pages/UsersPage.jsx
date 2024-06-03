@@ -6,7 +6,7 @@ const UsersPage = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [userAlbums, setUserAlbums] = useState({}); // New state for album counts
+  const [userAlbums, setUserAlbums] = useState({});
 
   useEffect(() => {
     const fetchUsers = async () => {
