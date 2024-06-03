@@ -10,7 +10,7 @@ const PhotoPage = () => {
   const [newTitle, setNewTitle] = useState("");
 
   const { userId, albumId, photoId } = useParams(); // Access user ID, album ID, and photo ID from route parameters
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPhotoDetails = async () => {
@@ -67,14 +67,6 @@ const PhotoPage = () => {
       console.error("Error updating photo title:", error);
     }
   };
-
-  // const handleSaveTitle = async () => {
-  //   if (!newTitle) return; // Prevent saving empty title
-
-  //   // Simulate updating photo title (replace with actual update logic)
-  //   console.log("Saving new title:", newTitle);
-  //   setIsEditingTitle(false);
-  // };
 
   const handleCancelEdit = () => {
     setIsEditingTitle(false);
