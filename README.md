@@ -16,7 +16,7 @@ This project utilizes the following libraries to provide a robust and user-frien
 
 **Development Setup:**
 
-**Clone the repository:** Clone this repository to your local machine using git clone https://docs.github.com/articles/remembering-your-github-username-or-email.
+**Clone the repository:** Clone this repository to your local machine using git clone https://github.com/GabrielOchieng/photoweb.git.
 
 **Install dependencies:** Run npm install in the project directory to install all required dependencies.
 
@@ -30,8 +30,10 @@ This project utilizes the following libraries to provide a robust and user-frien
 
 This project implements automated testing and a CI/CD pipeline for continuous integration and deployment.
 
-Testing: The project uses Vitest for unit testing (https://vitest.dev/).
-**CI/CD Pipeline:** A GitHub Actions workflow is configured to run tests on push events to the master branch. The workflow also includes deployment to a production environment upon successful tests.
+**Testing:** The project uses Vitest for unit testing (https://vitest.dev/).
+
+**CI/CD Pipeline:** A GitHub Actions workflow is configured to run tests on push events to the master branch. 
+The workflow also includes deployment to a production environment upon successful tests.
 
 
 
