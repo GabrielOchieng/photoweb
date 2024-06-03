@@ -1,6 +1,7 @@
 import happybrowsing from "/happybrowsing.jpeg";
 import googleplay from "/googleplay.jpg";
 import appstore from "/appstore.png";
+import { Link } from "react-router-dom";
 const Body = () => {
   return (
     <div className=" flex flex-col">
@@ -16,8 +17,16 @@ const Body = () => {
             family and friends. Share memories together!
           </p>
           <div className="flex gap-2">
-            <img src={appstore} alt="appstore" className="cursor-pointer" />
-            <img src={googleplay} alt="googletore" className="cursor-pointer" />
+            <Link to="/users">
+              <img src={appstore} alt="appstore" className="cursor-pointer" />
+            </Link>
+            <Link to="/users">
+              <img
+                src={googleplay}
+                alt="googletore"
+                className="cursor-pointer"
+              />
+            </Link>
           </div>
         </div>
         <div>
