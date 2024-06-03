@@ -9,7 +9,7 @@ const PhotoPage = () => {
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [newTitle, setNewTitle] = useState("");
 
-  const { userId, albumId, photoId } = useParams(); // Access user ID, album ID, and photo ID from route parameters
+  const { userId, albumId, photoId } = useParams(); // Access of user ID, album ID, and photo ID from route parameters
   const navigate = useNavigate();
 
   useEffect(() => {

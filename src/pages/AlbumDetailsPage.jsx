@@ -7,7 +7,7 @@ const AlbumDetailsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const { userId, albumId } = useParams(); // Access user ID and album ID from route parameters
+  const { userId, albumId } = useParams(); // Access of user ID and album ID from route parameters
   const navigate = useNavigate();
 
   useEffect(() => {

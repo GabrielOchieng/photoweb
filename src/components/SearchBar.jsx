@@ -49,7 +49,7 @@ const SearchBar = () => {
         onSubmit={handleSearchSubmit}
       >
         <input
-          className=" bg-transparent outline-none"
+          className=" bg-transparent outline-none w-full"
           type="search"
           placeholder="Search"
           aria-label="Search"

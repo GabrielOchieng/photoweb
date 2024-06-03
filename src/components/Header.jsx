@@ -13,7 +13,7 @@ const Header = () => {
         height: "600px",
       }}
       className="flex flex-col md:flex-row pt-5 md:pt-0 relative"
-      data-testid="header" // Added data-testid for the entire header
+      data-testid="header"
     >
       <div className="w-full md:w-1/2 pl-6 flex flex-col gap-6 text-white justify-center items-start">
         <h1
@@ -39,7 +39,7 @@ const Header = () => {
           src={photos}
           alt="photo"
           className="w-48 sm:w-72 h-48 sm:h-72 absolute bottom-10 right-20 rotate-12 "
-          data-testid="photo-image" // Added data-testid for the photo image
+          data-testid="photo-image"
         />
       </div>
     </div>
