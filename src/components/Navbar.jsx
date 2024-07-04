@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import Menu from "./Menu"; // Assuming Menu component is implemented
-import SearchBar from "./SearchBar"; // Assuming SearchBar component is implemented
+import Menu from "./Menu";
+import SearchBar from "./SearchBar";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../redux/slices/usersApiSlice";
 import { logout } from "../redux/slices/authSlice";

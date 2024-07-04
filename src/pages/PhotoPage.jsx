@@ -68,14 +68,6 @@ const PhotoPage = () => {
     }
   };
 
-  // const handleSaveTitle = async () => {
-  //   if (!newTitle) return; // Prevent saving empty title
-
-  //   // Simulate updating photo title (replace with actual update logic)
-  //   console.log("Saving new title:", newTitle);
-  //   setIsEditingTitle(false);
-  // };
-
   const handleCancelEdit = () => {
     setIsEditingTitle(false);
     setNewTitle(photo.title); // Reset edit value to current title

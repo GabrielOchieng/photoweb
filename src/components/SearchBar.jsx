@@ -1,22 +1,10 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
   const [name, setName] = useState("");
-  //   const navigate = useNavigate();
-
-  //   const handleSearch = (e) => {
-  //     e.preventDefault();
-  //     if (name) {
-  //       navigate(`/list?name=${name}`);
-  //     }
-  //   };
 
   return (
-    <form
-      className="flex items-center justify-between gap-4 bg-gray-100 p-2 rounded-md flex-1"
-      //   onSubmit={handleSearch}
-    >
+    <form className="flex items-center justify-between gap-4 bg-gray-100 p-2 rounded-md flex-1">
       <input
         type="text"
         name="name"

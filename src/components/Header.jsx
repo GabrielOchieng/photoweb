@@ -6,8 +6,8 @@ const Header = () => {
     <div
       style={{
         backgroundImage: `url(${headerBackground})`,
-        backgroundRepeat: "no-repeat", // Optional: control background repeat
-        backgroundSize: "cover", // Optional: control background size
+        backgroundRepeat: "no-repeat", //  control background repeat
+        backgroundSize: "cover", //  control background size
         height: "600px", // Set a height for the div
       }}
       className="flex flex-col md:flex-row pt-5 md:pt-0 relative"
