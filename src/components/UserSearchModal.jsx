@@ -8,7 +8,6 @@ const UserSearchModal = ({
   searchTerm,
   handleSearchSubmit,
 }) => {
-  console.log(searchResults);
   return (
     <div className="fixed top-20 right-10 w-64 bg-teal-500 opacity-75 z-50 rounded-md shadow-md">
       <div className="bg-white rounded p-3">
