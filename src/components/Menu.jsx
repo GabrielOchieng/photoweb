@@ -10,18 +10,28 @@ const Menu = ({ userInfo, handleLogout }) => {
     <div className="">
       {open ? (
         <BiX
+          data-testid="close-icon" // Added data-testid for close icon
           className="cursor-pointer w-14 h-14 object-cover"
           onClick={() => setOpen(false)}
         />
       ) : (
-        <IoMenu
+        <button
+          data-testid="menu-icon" // Added data-testid for menu icon button
           className="cursor-pointer w-14 h-14 object-cover"
-          onClick={() => setOpen(true)}
-        />
+          aria-label="Close Menu"
+        >
+          <IoMenu
+            className="cursor-pointer w-14 h-14 object-cover"
+            onClick={() => setOpen(true)}
+          />
+        </button>
       )}
 
       {open && (
-        <div className="absolute bg-teal-700 text-white right-0 top-20 w-64 h-[200px] flex flex-col items-start justify-center gap-4 text-xl z-10 pl-5 rounded-b-md">
+        <div
+          data-testid="dropdown-menu" // Added data-testid for dropdown menu
+          className="absolute bg-teal-700 text-white right-0 top-20 w-64 h-[200px] flex flex-col items-start justify-center gap-4 text-xl z-10 pl-5 rounded-b-md"
+        >
           <Link to="/" className="hover:text-black">
             Home
           </Link>

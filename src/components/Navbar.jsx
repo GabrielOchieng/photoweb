@@ -5,12 +5,52 @@ import { Link, useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../redux/slices/usersApiSlice";
 import { logout } from "../redux/slices/authSlice";
 import { IoMdPhotos } from "react-icons/io";
+import UserSearchModal from "./UserSearchModal";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const { userInfo } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [logoutApiCall] = useLogoutMutation();
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        const data = await response.json();
+        console.log(data);
+        setUsers(data);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+    fetchUsers();
+  }, []);
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value.toLowerCase());
+    const filteredResults = users.filter((user) =>
+      user.name.toLowerCase().includes(searchTerm)
+    );
+    setSearchResults(filteredResults);
+    setShowModal(searchTerm.length > 0); // Open modal when there's a search term
+  };
+  const handleSearchSubmit = (event) => {
+    setShowModal(false);
+    setSearchTerm("");
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   const handleLogout = async () => {
     try {
@@ -40,7 +80,6 @@ const Navbar = () => {
         <div className="w-1/3 xl:w-2/3 flex items-center gap-12">
           <Link to="/" className="flex items-center gap-2">
             {" "}
-            {/* Replace with routing library if needed */}
             <IoMdPhotos className="w-12 h-12 object-cover text-teal-700" />
             <div className="text-2xl tracking-wide">PHOTOWEB</div>
           </Link>
@@ -70,7 +109,19 @@ const Navbar = () => {
         </div>
         {/* RIGHT */}
         <div className="w-2/3 xl:w-1/3 flex items-center justify-between gap-8">
-          <SearchBar />
+          <SearchBar
+            searchTerm={searchTerm}
+            onChange={handleSearchChange}
+            onSubmit={handleSearchSubmit}
+          />
+          {showModal && (
+            <UserSearchModal
+              searchResults={searchResults}
+              onClose={handleCloseModal}
+              searchTerm={searchTerm}
+              handleSearchSubmit={handleSearchSubmit}
+            />
+          )}
         </div>
       </div>
     </div>

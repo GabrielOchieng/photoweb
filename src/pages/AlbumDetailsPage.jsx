@@ -7,7 +7,7 @@ const AlbumDetailsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const { userId, albumId } = useParams(); // Access user ID and album ID from route parameters
+  const { userId, albumId } = useParams(); // Access of user ID and album ID from route parameters
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -80,7 +80,6 @@ const AlbumDetailsPage = () => {
                   className="rounded overflow-hidden cursor-pointer"
                 >
                   {" "}
-                  {/* Add cursor-pointer class */}
                   <img
                     src={photo.url}
                     alt={photo.title}

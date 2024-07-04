@@ -8,7 +8,7 @@ const UserDetailsPage = () => {
   const [error, setError] = useState(null);
   const [albums, setAlbums] = useState([]);
 
-  const navigate = useNavigate(); // Utilize useNavigate hook for navigation
+  const navigate = useNavigate(); // useNavigate hook for navigation
   const { userId } = useParams(); // Access user ID from route parameter
 
   useEffect(() => {

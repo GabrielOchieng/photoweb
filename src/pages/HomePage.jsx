@@ -7,7 +7,6 @@ const HomePage = () => {
     <div className="bg-slate-200">
       <Header />
       <Body />
-
       <Features />
     </div>
   );

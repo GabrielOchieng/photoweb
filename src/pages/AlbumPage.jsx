@@ -40,7 +40,6 @@ const AlbumPage = () => {
           {albums.map((album) => (
             <li key={album.id} className="p-4 bg-white rounded-md shadow-md">
               <h2 className="text-xl font-medium">{album.title}</h2>
-              {/* Add more album details or link to a details page here */}
             </li>
           ))}
         </ul>
